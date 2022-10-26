@@ -32,9 +32,10 @@
 {} % label
 {1ex} % sep
 {
-	\color{cyan}\rule{0.7\textwidth}{6pt}\vspace{2pt}\newline
+	\hspace{-0pt}\color{cyan}\rule{0.7\textwidth}{6pt}\vspace{2pt}\newline
 	\color{black}
 } % before-code
+\titlespacing{\section}{0pt}{0ex}{0ex}
 
 \titleformat
 {\subsection} % command
@@ -43,18 +44,17 @@
 {} % label
 {1ex} % sep
 {
-	\color{cyan}\rule{0.5\textwidth}{3pt}\vspace{5pt}\newline
-	\color{black}\hspace{11pt}
+	\hspace{-24pt}\color{cyan}\rule{0.5\textwidth}{3pt}\vspace{5pt}\newline
+	\color{black}
 } % before-code
-\titlespacing*{\subsection}{0pt}{0ex}{0em}
+\titlespacing{\subsection}{\parindent}{0ex}{0ex}
 
 
 \usepackage{amsmath}
 \usepackage{makecell}
 \usepackage{tabulary}
 
-
-\usepackage{indentfirst}
+\setlength\parindent{24pt}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -73,7 +73,7 @@
 \newfontfamily\myfont{Arial}
 \fancyhead[C]{\begin{minipage}{\textwidth}\color{white}\centering\small\bf{\myfont
 			\textit{ОТКРИТО ПЪРВЕНСТВО НА СОФИЯ ПО ИНФОРМАТИКА}\\\
-			\textit{01 април 2022 г.}\\
+			\textit{12 ноември 2022 г.}\\
 			\textit{Група A, 11–12 клас} \vspace{-10pt}} \end{minipage}}
 \renewcommand{\headrulewidth}{0pt}
 
@@ -84,3 +84,7 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \sloppy
+
+\usepackage{caption}
+\captionsetup[table]{skip=3pt,font=it,format=hang,indention=-24pt,margin=24pt}
+\usepackage{placeins}
