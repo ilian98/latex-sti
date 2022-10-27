@@ -24,7 +24,7 @@
 \setsansfont{Times New Roman}
 \setmonofont{Consolas}
 
-\usepackage{titlesec}
+\usepackage[nobottomtitles*]{titlesec}
 \titleformat
 {\section} % command
 [display] % shape
@@ -32,7 +32,7 @@
 {} % label
 {1ex} % sep
 {
-	\hspace{-0pt}\color{cyan}\rule{0.7\textwidth}{6pt}\vspace{2pt}\newline
+	\hspace{-0pt}\color{cyan}\rule{0.7\textwidth}{6pt}\\*[2pt]
 	\color{black}
 } % before-code
 \titlespacing{\section}{0pt}{0ex}{0ex}
@@ -44,17 +44,16 @@
 {} % label
 {1ex} % sep
 {
-	\hspace{-24pt}\color{cyan}\rule{0.5\textwidth}{3pt}\vspace{5pt}\newline
-	\color{black}
+	\hspace{-24pt}\color{cyan}\rule{0.5\textwidth}{3pt}\\*[5pt]
+	\color{black}\nopagebreak
 } % before-code
 \titlespacing{\subsection}{\parindent}{0ex}{0ex}
 
+\setlength\parindent{24pt}
 
 \usepackage{amsmath}
 \usepackage{makecell}
 \usepackage{tabulary}
-
-\setlength\parindent{24pt}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -88,3 +87,6 @@
 \usepackage{caption}
 \captionsetup[table]{skip=3pt,font=it,format=hang,indention=-24pt,margin=24pt}
 \usepackage{placeins}
+
+\usepackage{enumitem}
+\setlist{itemsep=0pt,topsep=0pt}
