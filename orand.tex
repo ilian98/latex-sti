@@ -23,54 +23,53 @@
 
 \subsection*{Подзадачи}
 \begin{table}[hbtp]
-\centering
-\setlength\extrarowheight{2pt}
-\begin{tabulary}{1.0\textwidth}{ |c|c|c|c|c|C| }
-\hline
-\makecell[t]{\\ \textbf{Подзадача}} & \makecell[t]{\\ \textbf{Точки}} & \makecell[t]{\\ $N$} & \makecell[t]{\\ \textbf{Допълнителни ограничения}} & \makecell[t]{\textbf{Необходими} \\ \textbf{предишни} \\ \textbf{подзадачи}} \\
-\hline
-1 & 0 & $-$ & Примерът. & $-$ \\ 
-\hline
-2 & 11 & $\leq 10^1$ & $-$ & $1$ \\ 
-\hline
-3 & 30 & $\leq 10^2$ & $-$ & $1-2$ \\
-\hline
-4 & 38 & $\leq 10^3$ & $-$ & $1-3$\\
-\hline
-5 & 10 & $\leq 2.10^4$ & $-$ & $1-4$\\
-\hline
-6 & 11 & $\leq 10^5$ & $-$ & $1-5$ \\
-\hline
-\end{tabulary}
+	\centering
+	\setlength\extrarowheight{2pt}
+	\begin{tblr}{|X[1.25,c,m]|X[0.75,c,m]|X[1.5,c,m]|X[c,m]|X[4,c,m]|}
+		\hline
+		\textbf{Подзадача} & \textbf{Точки} & \textbf{Необходими подзадачи} &
+		$N$ & 
+		\textbf{Допълнителни ограничения} \\
+		\hline
+		1 & 0 & -- & $-$ & Примерът. \\ 
+		\hline
+		2 & 11 & $1$ & $\leq 10^1$ & -- \\ 
+		\hline
+		3 & 30 & $1-2$ & $\leq 10^2$ & -- \\
+		\hline
+		4 & 38 & $1-3$ & $\leq 10^3$ & -- \\
+		\hline
+		5 & 10 & $1-4$ & $\leq 2.10^4$ & -- \\
+		\hline
+		6 & 11 & $1-5$ & $\leq 10^5$ & -- \\
+		\hline
+	\end{tblr}
 \caption*{\indent Точките за дадена подзадача се получават само ако се преминат успешно всички тестове, предвидени за нея и необходимите предишни подзадачи.}
 \end{table}
 \FloatBarrier
 
 \subsection*{Пример}
-\begin{table}[hbtp]
-\centering
-\setlength\extrarowheight{2pt}
-\begin{tabulary}{1.0\textwidth}{ |l|l|J| }
-\hline
-    \textbf{Вход} & \textbf{Изход} & \textbf{Обяснение на примера} \\
-\hline
-    \texttt{\makecell[tl]{
-    6 4 \\ 
-    13 15 13 5 1 7 \\ 
-    1 5 \\ 
-    2 5 \\ 
-    3 6 \\
-    4 6}} & 
-    \texttt{\makecell[tl]{
-    Yes \\
-    No \\
-    Yes \\
-    No}} & 
-	Първата заявка се отнася за подмасива: $13, 15, 13, 5, 1$. Разделяме го на следните множества: $\{13, 5, 1\}$ и $\{13, 15\}$. \textit{Побитовото или} на първото множество е 13, колкото е \textit{побитовото и} на второто множество. \newline
-    Третата заявка се отнася за подмасива: $13, 5, 1, 7$. Разделяме го на следните множества: $\{5, 1\}$ и $\{13, 7\}$. \textit{Побитовото или} на първото множество е 5, колкото е \textit{побитовото и} на второто множество. \\
-\hline
-\end{tabulary}
+\begin{table}[ht]
+	\centering
+	\begin{tblr}{|X[2,l]|X[l]|X[6,j]|}
+		\hline
+		\textbf{Вход} & \textbf{Изход} & \textbf{Обяснение на примера} \\
+		\hline
+		{\texttt{6 4} \\
+			\texttt{13 15 13 5 1 7} \\ 
+			\texttt{1 5} \\ 
+			\texttt{2 5} \\ 
+			\texttt{3 6} \\
+			\texttt{4 6}} & 
+		{\texttt{Yes} \\
+			\texttt{No} \\
+			\texttt{Yes} \\
+			\texttt{No}} & 
+		{Първата заявка се отнася за подмасива: $13, 15, 13, 5, 1$. Разделяме го на следните множества: $\{13, 5, 1\}$ и $\{13, 15\}$. \textit{Побитовото или} на първото множество е 13, колкото е \textit{побитовото и} на второто множество. \\
+			Третата заявка се отнася за подмасива: $13, 5, 1, 7$. Разделяме го на следните множества: $\{5, 1\}$ и $\{13, 7\}$. \textit{Побитовото или} на първото множество е 5, колкото е \textit{побитовото и} на второто множество.} \\
+		\hline
+	\end{tblr}
 \end{table}
 \FloatBarrier
-	
+
 \end{document}
