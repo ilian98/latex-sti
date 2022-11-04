@@ -81,16 +81,16 @@
 \pagenumbering{gobble}
 
 \usepackage{graphicx}
+\graphicspath{{./images/}}
+\usepackage[export]{adjustbox}
 \usepackage{wrapfig}
 \sloppy
 
 \usepackage{caption}
-\captionsetup[table]{skip=3pt,font=it,format=hang,indention=-24pt,margin=24pt}
+\captionsetup[table]{skip=3pt,font=it,
+	singlelinecheck=false,justification=justified,indention=-24pt,
+	margin={24pt, 0pt}}
 \usepackage{placeins}
 
 \usepackage{enumitem}
 \setlist{itemsep=-5pt,topsep=0pt}
-
-\usepackage{graphicx}
-\graphicspath{{./images/}}
-\usepackage[export]{adjustbox}
