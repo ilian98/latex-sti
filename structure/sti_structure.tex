@@ -7,7 +7,7 @@
 \geometry{
 	paper=a4paper, % Paper size, change to letterpaper for US letter size
 	top=4.25cm, % Top margin
-	bottom=3cm, % Bottom margin
+	bottom=\bottomMargin, % Bottom margin
 	left=2.5cm, % Left margin
 	right=2.5cm, % Right margin
 	headheight=3cm, % Header height
@@ -23,6 +23,8 @@
 \setmainfont{Times New Roman}
 \setsansfont{Times New Roman}
 \setmonofont{Consolas}
+\usepackage[math-style = TeX]{unicode-math}
+\setmathfont{\mathfont}
 
 \usepackage[nobottomtitles*]{titlesec}
 \titleformat
@@ -57,14 +59,9 @@
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-%\setlength{\headheight}{35pt}
 
 \usepackage{background}
 \backgroundsetup{contents={\includegraphics[width=28cm,height=3.45cm]{./structure/header_background.png}},scale=1,placement=top,opacity=0.8}
-
-\fancyhead{}
-%\fancyhead[L]{\includegraphics[height=2cm]{ruo.jpg}}
-%\fancyhead[R]{\includegraphics[height=2cm]{sap.png}}
 
 \fancyhead[L]{\begin{minipage}{\textwidth}\flushleft\includegraphics[width=2.8cm]{./structure/ruo.png} \vspace{10pt} \end{minipage}}
 \fancyhead[R]{\begin{minipage}{\textwidth}\flushright\includegraphics[width=2.8cm]{./structure/sap.png}\end{minipage}}
