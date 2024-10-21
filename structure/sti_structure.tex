@@ -47,7 +47,7 @@
 \pagestyle{fancy}
 \usepackage{background}
 \backgroundsetup{
-	contents={\includegraphics[width=28cm,height=3.45cm]{./structure/header_background.png}},scale=1,placement=top,opacity=0.8
+	contents={\includegraphics[width=28cm, height=3.45cm]{./structure/header_background.png}}, scale=1, placement=top, opacity=0.8
 }
 \fancyhead[L]{
 	\begin{minipage}{\textwidth}
@@ -62,8 +62,8 @@
 	\end{minipage}
 }
 \newfontfamily\headerfont[
-ItalicFont = *i,
-BoldItalicFont = *bi
+	ItalicFont = *i,
+	BoldItalicFont = *bi
 ]{Arial}
 \fancyhead[C]{
 	\begin{minipage}{\textwidth}
@@ -93,7 +93,7 @@ BoldItalicFont = *bi
 \patchcmd\WF@putfigmaybe{\lower\intextsep}{}{}{\fail}
 \AddToHook{env/wrapfigure/begin}{\setlength{\intextsep}{0pt}}
 \makeatother
-\usepackage[inkscapearea=page,inkscapepath=./svg-inkscape]{svg}
+\usepackage[inkscapearea=page, inkscapepath=./svg-inkscape]{svg}
 \svgpath{{./images/}}
 
 \usepackage{makecell}
@@ -104,13 +104,13 @@ BoldItalicFont = *bi
 \usepackage{placeins}
 \usepackage{caption}
 \captionsetup[table]{
-	skip=0.25em,font=it,
-	singlelinecheck=false,justification=justified,indention=-24pt,
+	skip=0.25em, font=it,
+	singlelinecheck=false, justification=justified, indention=-24pt,
 	margin={24pt, 0pt}
 }
 
 \usepackage{enumitem}
-\setlist{itemsep=-0.4em,leftmargin=\parindent,topsep=-\parskip}
+\setlist{itemsep=-0.4em, leftmargin=\parindent, topsep=-\parskip}
 \newcommand{\tabitem}{\indent~~\llap{\textbullet}~~}
 
 \usepackage{hyperref}
