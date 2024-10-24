@@ -39,6 +39,19 @@
 {\hspace{-24pt}{\color{cyan}\rule{0.5\textwidth}{0.5\parskip}}\\*[5pt]} % before-code
 \titlespacing{\subsection}{\parindent}{0em}{0em}
 
+\newcommand{\formatdate}[3]{#1#2#3} % formats as YYYYMMDD
+\newcommand{\addauthor}[4]{%
+	\newcommand{\targetdate}{%
+		\formatdate{#2}{#3}{#4}
+	}
+	\newcommand{\currentdate}{%
+		\formatdate{\the\year}{\ifnum\month<10 0\fi\the\month}{\ifnum\day<10 0\fi\the\day}
+	}
+	\ifnum\currentdate>\targetdate
+		{\noindent\hfill\bfseries{#1}}
+	\fi
+}
+
 \setlength{\parskip}{0.5em}
 \setlength{\parindent}{24pt}
 \sloppy
