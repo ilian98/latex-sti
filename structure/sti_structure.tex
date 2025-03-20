@@ -26,11 +26,12 @@
 \usepackage[dvipsnames]{xcolor}
 \titleformat
 {\section} % command
-{\normalfont\fontsize{14}{14}\sffamily\bfseries} % format
+{\fontsize{14}{14}\sffamily\bfseries} % format
 {} % label
 {0pt} % sep
 {\hspace{-0pt}{\color{cyan}\rule{0.7\textwidth}{\parskip}}\\*[2pt]} % before-code
 \titlespacing{\section}{0pt}{0em}{0em}
+\AddToHook{cmd/section/before}{\clearpage}
 \titleformat
 {\subsection} % command
 {\fontsize{14}{14}\bfseries} % format
@@ -40,15 +41,12 @@
 \titlespacing{\subsection}{\parindent}{0em}{0em}
 
 \newcommand{\formatdate}[3]{#1#2#3} % formats as YYYYMMDD
+\newcommand{\currentdate}{%
+	\formatdate{\the\year}{\ifnum\month<10 0\fi\the\month}{\ifnum\day<10 0\fi\the\day}
+}
 \newcommand{\addauthor}[4]{%
-	\newcommand{\targetdate}{%
-		\formatdate{#2}{#3}{#4}
-	}
-	\newcommand{\currentdate}{%
-		\formatdate{\the\year}{\ifnum\month<10 0\fi\the\month}{\ifnum\day<10 0\fi\the\day}
-	}
-	\ifnum\currentdate>\targetdate
-		{\noindent\hfill\bfseries{#1}}
+	\ifnum\currentdate>\formatdate{#2}{#3}{#4}
+	{\noindent\hfill\bfseries{#1}}
 	\fi
 }
 
@@ -78,6 +76,9 @@
 	ItalicFont = *i,
 	BoldItalicFont = *bi
 ]{Arial}
+\newcommand{\contestDate}{22 март 2025 г.}
+\newcommand{\group}{A}
+\newcommand{\grade}{11-12}
 \fancyhead[C]{
 	\begin{minipage}{\textwidth}
 		\color{white}\centering\small\textbf{
@@ -88,7 +89,7 @@
 		}
 	\end{minipage}
 }
-\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0cm}
 \fancyheadoffset[L,R]{1.5cm}
 \usepackage{lastpage}
 \fancyfoot[C]{\thepage\ / \pageref*{LastPage}}
