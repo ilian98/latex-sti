@@ -1,11 +1,17 @@
 \documentclass[12pt]{article}
-
-\newcommand{\monofont}{Consolas}
-\newcommand{\mathfont}{Latin Modern Math}
 \input{structure/sti_structure.tex}
 \renewcommand{\bottomtitlespace}{3.5cm}
 
 \begin{document}
+
+\setmonofont[
+	Path = Consolas/,
+	Extension = .ttf,
+	UprightFont = *-Regular,
+	BoldFont = *-Bold,
+	ItalicFont = *-Italic,
+] {Consolas}
+\setmathfont{Latin Modern Math}
 
 \renewcommand{\contestDate}{22 март 2025 г.}
 \renewcommand{\group}{A}
